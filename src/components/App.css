@@ -1,1 +1,8 @@
 /* Styles go here */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+.back{
+    background-color: ivory
+}
+*{
+    font-family: 'Fira Code', monospace;
+}
