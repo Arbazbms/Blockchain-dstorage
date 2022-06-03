@@ -1,9 +1,18 @@
 import DStorage from '../abis/DStorage.json'
 import React, { Component } from 'react';
+import ReactDOM from "react-dom";
 import Navbar from './Navbar'
 import Main from './Main'
+import  {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Landing from "./Landing";
+import ListFile from "./ListFile";
 import Web3 from 'web3';
 import './App.css';
+import FileRetrieve from './FileRetrieve';
 
 //Declare IPFS
 const ipfsClient = require('ipfs-http-client')
@@ -127,17 +136,28 @@ class App extends Component {
 
   render() {
     return (
-      <div className="back">
+      <>
         <Navbar account={this.state.account} />
-        { this.state.loading
+        {/* { this.state.loading
           ? <div id="loader" className="text-center mt-5"><p>Loading...</p></div>
-          : <Main
-              files={this.state.files}
-              captureFile={this.captureFile}
-              uploadFile={this.uploadFile}
-            />
-        }
-      </div>
+          // : <Main
+          //     files={this.state.files}
+          //     captureFile={this.captureFile}
+          //     uploadFile={this.uploadFile}
+          //   />
+          //  : <Routes>
+          //       <Route path="/" element={<Landing />} />
+          //       <Route path="/uploadFile" element={<Main captureFile={this.captureFile} uploadFile={this.uploadFile} />}  />
+          //       <Route path="/listFiles" element={<ListFile  files={this.state.files} />} />
+          //    </Routes>
+        } */}
+        <Routes>
+                <Route path="/" element={<Landing />} />
+                <Route path="/uploadFile" element={<Main captureFile={this.captureFile} uploadFile={this.uploadFile} />}  />
+                <Route path="/listFiles" element={<ListFile  files={this.state.files} />} />
+                <Route path="retrieve" element={<FileRetrieve />} />
+        </Routes>
+      </>
     );
   }
 }

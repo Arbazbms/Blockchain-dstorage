@@ -1,8 +1,20 @@
 /* Styles go here */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
 .back{
     background-color: ivory
 }
 *{
-    font-family: 'Fira Code', monospace;
+    font-family: 'Joan', serif;
+}
+
+
+.form-control, .fileInputTextBox, .my-btn {
+    width: 760px !important;
+    margin-bottom: 15px !important;
+}
+
+.tabb{
+    display: flex;
+    justify-content: center;
 }
