@@ -2,7 +2,7 @@ import DStorage from '../abis/DStorage.json'
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import Navbar from './Navbar'
-import Main from './Main'
+import UploadFile from './UploadFile'
 import  {
   BrowserRouter,
   Routes,
@@ -138,25 +138,21 @@ class App extends Component {
     return (
       <>
         <Navbar account={this.state.account} />
-        {/* { this.state.loading
+        { this.state.loading
           ? <div id="loader" className="text-center mt-5"><p>Loading...</p></div>
-          // : <Main
-          //     files={this.state.files}
-          //     captureFile={this.captureFile}
-          //     uploadFile={this.uploadFile}
-          //   />
-          //  : <Routes>
-          //       <Route path="/" element={<Landing />} />
-          //       <Route path="/uploadFile" element={<Main captureFile={this.captureFile} uploadFile={this.uploadFile} />}  />
-          //       <Route path="/listFiles" element={<ListFile  files={this.state.files} />} />
-          //    </Routes>
-        } */}
-        <Routes>
+           : <Routes>
+                <Route path="/" element={<Landing account={this.state.account} />} />
+                <Route path="/uploadFile" element={<UploadFile captureFile={this.captureFile} uploadFile={this.uploadFile} />}  />
+                <Route path="/listFiles" element={<ListFile  files={this.state.files} count={this.state.files.length} />} />
+                <Route path="/retrieve" element={<FileRetrieve />} />
+             </Routes>
+        }
+        {/* <Routes>
                 <Route path="/" element={<Landing />} />
-                <Route path="/uploadFile" element={<Main captureFile={this.captureFile} uploadFile={this.uploadFile} />}  />
+                <Route path="/uploadFile" element={<UploadFile captureFile={this.captureFile} uploadFile={this.uploadFile} />}  />
                 <Route path="/listFiles" element={<ListFile  files={this.state.files} />} />
-                <Route path="retrieve" element={<FileRetrieve />} />
-        </Routes>
+                <Route path="/retrieve" element={<FileRetrieve />} />
+        </Routes> */}
       </>
     );
   }

@@ -1,20 +1,75 @@
 /* Styles go here */
 /* @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika&family=Lora&family=Merriweather:wght@300&family=Noto+Serif&display=swap');
+
+/*
+font-family: 'Inika', serif;
+font-family: 'Lora', serif;
+font-family: 'Merriweather', serif;
+font-family: 'Noto Serif', serif;
+*/
+
 .back{
     background-color: ivory
 }
+
 *{
-    font-family: 'Joan', serif;
+    /* font-family: 'Joan', serif; */
+    /* font-family: 'Inika', serif; */
+    font-family: 'Lora', serif;
 }
 
-
-.form-control, .fileInputTextBox, .my-btn {
+/* .form-control, .fileInputTextBox, .my-btn {
     width: 760px !important;
     margin-bottom: 15px !important;
-}
+} */
 
 .tabb{
     display: flex;
     justify-content: center;
 }
+
+.card-header {
+    background-color: #e9ecef !important;
+}
+
+.jumbotron{
+    border: 2px solid #8995a0;
+}
+
+.borderBottom {
+    border: 2px solid #8995a0;
+}
+
+.borderBottom1 {
+    border: 2px solid #8995a0;
+    border-radius: 0 !important;
+}
+
+.nav-link {
+    text-decoration: none !important;
+    color: #1f3448 !important;
+}
+
+.formBackground {
+    /* background-color: #eff4f6; */
+    border: 2px solid #a0afbc;
+}
+
+.paraText {
+    font-size:18px;
+}
+
+.names {
+    text-decoration: none !important;
+}
+
+.navbar {
+    background-color: #232629 !important;
+}
+
+.homeBtn {
+    border-radius: 0px !important;
+}
+

@@ -6,17 +6,17 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-dark bg-dark p-0 text-monospace">
+      <nav className="navbar navbar-dark bg-dark p-3">
         <a
           className="navbar-brand col-sm-3 col-md-2 mr-0"
           target="_blank"
           rel="noopener noreferrer"
         >
-          DApp
+          &lt; DApp for Educational Resources /&gt;
         </a>
         <ul className="navbar-nav px-3">
           <li>
-            <small id="account">
+            <span id="account">
               <a target="_blank"
                  alt=""
                  className="text-white"
@@ -24,7 +24,7 @@ class Navbar extends Component {
                  href={"https://etherscan.io/address/" + this.props.account}>
                 {this.props.account ? this.props.account.substring(0,6) : '0x0'}...{this.props.account ? this.props.account.substring(38,42) : '0x0'}
               </a>
-            </small>
+            </span>
             { this.props.account
               ? <img
                   alt=""

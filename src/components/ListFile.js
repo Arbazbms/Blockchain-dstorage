@@ -6,6 +6,9 @@ class ListFile extends Component
 {
     render() {
         return (
+          <>
+          <h2 className="text-center mt-5">File count: {this.props.count}</h2>
+          { this.props.count === 0 ? <h5 className="text-center text-danger"> No File found, Please Upload a File & Try again.</h5>:
           <div className="container mt-5 text-center tabb">
             <div className="row">
                   <p>&nbsp;</p>
@@ -44,7 +47,8 @@ class ListFile extends Component
                     })}
                   </table>
                 </div>
-          </div>
+          </div>}
+          </>
         );
       }
 }
