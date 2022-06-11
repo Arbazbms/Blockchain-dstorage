@@ -35,10 +35,10 @@ class UpoadFile extends Component {
               </div>
               <div className="row text-center">
                 <div className="col-md-6">
-                  <button type="submit" className="btn btn-block btn-success">Upload.!</button>
+                  <button type="submit" className="btn btn-block btn-success"><span className="fa fa-upload"></span> Upload.!</button>
                 </div>
                 <div className="col-md-6">
-                  <button type="reset" className="btn btn-block btn-dark">Reset</button>
+                  <button type="reset" className="btn btn-block btn-dark" onClick={()=>window.location.reload()}>Reset</button>
                 </div>
               </div>
               <div className="row text-center">
@@ -47,11 +47,10 @@ class UpoadFile extends Component {
                     className="btn btn-block btn-info mb-3 homeBtn"
                     to="/"
                   >
-                    Home
+                     Home <span className="fa fa-home"></span>
                   </Link>
                 </div>
               </div>
-
             </form>
           </div>
         </div>

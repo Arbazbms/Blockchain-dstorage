@@ -9,16 +9,16 @@ const Landing = ({
     const userLeftSide = () => {
         return (
             <div className="card text-center">
-                <h5 className="card-header text-center borderBottom">
+                <h4 className="card-header text-center borderBottom">
                     <b>Home</b>
-                </h5>
-                <ul className="list-group">
+                </h4>
+                <ul className="list-group text-center">
                     <li className="list-group-item borderBottom1">
                         <Link
                             to="/uploadFile"
                             className="nav-link"
                         >
-                            Upload File
+                            <span className="fa fa-upload"></span> Upload File
                         </Link>
                     </li>
                     <li className="list-group-item borderBottom1">
@@ -26,7 +26,7 @@ const Landing = ({
                             to="/listFiles"
                             className="nav-link"
                         >
-                            List Files
+                            <i class="fa fa-align-center"></i> List Files
                         </Link>
                     </li>
                     <li className="list-group-item borderBottom1">
@@ -34,7 +34,7 @@ const Landing = ({
                             to="/retrieve"
                             className="nav-link"
                         >
-                            Search for a File
+                            <i className="fa fa-search"></i> Search for a File
                         </Link>
                     </li>
                 </ul>
@@ -46,7 +46,7 @@ const Landing = ({
         return (
             <div className="card mb-4">
                 <h4 className="card-header borderBottom">
-                    <b>User Information</b>
+                    <b><span className="fa fa-user-circle"></span> User Information</b>
                 </h4>
                 <ul className="list-group">
                     <li className="list-group-item borderBottom1">
@@ -62,10 +62,10 @@ const Landing = ({
 
     return (
         <>
-            <Base title={"Hello, { " + account.substring(0, 6) + "..." + account.substring(38, 42) + " }"} description="Welcome to Decentralised Storage System for Educational Resources">
+            <Base title={"Hello, { " + account.substring(0, 6) + "..." + account.substring(36, 42) + " }"} description="Welcome to Decentralised Storage System for Educational Resources">
                 <div className="row">
-                    <div className="col-2">{userLeftSide()}</div>
-                    <div className="col-10">{userRightSide()}</div>
+                    <div className="col-3">{userLeftSide()}</div>
+                    <div className="col-9">{userRightSide()}</div>
                 </div>
             </Base>
         </>

@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import Home from './components/App';
 import { BrowserRouter } from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
+import 'font-awesome/css/font-awesome.min.css';
+
 
 ReactDOM.render( <BrowserRouter><Home /></BrowserRouter>, document.getElementById('root'));
 

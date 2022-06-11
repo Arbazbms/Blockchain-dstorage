@@ -67,9 +67,17 @@ font-family: 'Noto Serif', serif;
 
 .navbar {
     background-color: #232629 !important;
+    box-shadow: 0px 2px 10px rgba(255, 205, 20, 0.8);
 }
 
 .homeBtn {
     border-radius: 0px !important;
 }
 
+li {
+    font-size: 18px !important;
+}
+
+a {
+    cursor: pointer !important;
+}
