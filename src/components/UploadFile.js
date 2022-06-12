@@ -30,7 +30,7 @@ class UpoadFile extends Component {
               </div>
               <div>
                 <label className="btn btn-block btn-outline-info">
-                  <input type="file" onChange={this.props.captureFile} className="fileInputTextBox mb-3" />
+                  <input type="file" required onChange={this.props.captureFile} className="fileInputTextBox mb-3" />
                 </label>
               </div>
               <div className="row text-center">

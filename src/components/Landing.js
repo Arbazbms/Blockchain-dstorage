@@ -53,7 +53,7 @@ const Landing = ({
                         <span className="badge badge-success mr-2">
                             Public Id
                         </span>
-                        {account}
+                        {account ? account : "0x0"}
                     </li>
                 </ul>
             </div>
@@ -64,8 +64,8 @@ const Landing = ({
         <>
             <Base title={"Hello, { " + account.substring(0, 6) + "..." + account.substring(36, 42) + " }"} description="Welcome to Decentralised Storage System for Educational Resources">
                 <div className="row">
-                    <div className="col-3">{userLeftSide()}</div>
-                    <div className="col-9">{userRightSide()}</div>
+                    <div className="col-lg-3 col-sm-12">{userLeftSide()}</div>
+                    <div className="col-lg-9 col-sm-12">{userRightSide()}</div>
                 </div>
             </Base>
         </>

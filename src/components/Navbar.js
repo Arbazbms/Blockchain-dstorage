@@ -7,7 +7,7 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-dark bg-dark p-3">
         <a
-          className="navbar-brand col-sm-3 col-md-2 mr-0 text-warning"
+          className="navbar-brand col-sm-3 col-md-2 mr-0"
           href="#"
           rel="noopener noreferrer"
         >
