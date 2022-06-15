@@ -129,7 +129,7 @@ class App extends Component {
       type: null,
       name: null
     }
-
+    console.log("Files from App: "+typeof(this.state.files))
     //Bind functions
   }
 
@@ -140,11 +140,11 @@ class App extends Component {
         {this.state.loading
           ? <div id="loader" className="text-center mt-5"><h1>Loading...<i class="fa fa-cog fa-spin fa-fw"></i></h1></div>
           : <Routes>
+              <Route path="/" element={<Home files={this.state.files} count={this.state.files.length} />} />
               <Route path="/dashboard" element={<Landing account={this.state.account} count={this.state.files.length} />} />
               <Route path="/uploadFile" element={<UploadFile captureFile={this.captureFile} uploadFile={this.uploadFile} />} />
               <Route path="/listFiles" element={<ListFile files={this.state.files} count={this.state.files.length} />} />
               <Route path="/retrieve" element={<FileRetrieve />} />
-              <Route path="/" element={<Home files={this.state.files} count={this.state.files.length} />} />
           </Routes>
         }
         {/* <Routes>
