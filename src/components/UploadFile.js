@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 class UpoadFile extends Component {
 
   render() {
+    document.title="Upload File | DStorage for OER";
     return (
       <Base title="Upload a File Here.!" description="Welcome to File Upload Section." classname="container p-4 formBackground rounded">
         <div className="row">
@@ -42,12 +43,20 @@ class UpoadFile extends Component {
                 </div>
               </div>
               <div className="row text-center">
-                <div className="mt-3 col-md-3">
+                {/* <div className="mt-3 col-md-3">
                   <Link
                     className="btn btn-block btn-info mb-3 homeBtn"
                     to="/"
                   >
-                     Home <span className="fa fa-home"></span>
+                     <span className="fa fa-home"></span> Home
+                  </Link>
+                </div> */}
+                <div className="mt-3 col-md-3">
+                  <Link
+                    className="btn btn-block btn-info mb-3 homeBtn"
+                    to="/dashboard"
+                  >
+                    <span className="fa fa-tachometer"></span> Dashboard 
                   </Link>
                 </div>
               </div>

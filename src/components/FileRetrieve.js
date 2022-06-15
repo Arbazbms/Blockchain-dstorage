@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 const FileRetrieve = () => {
 
   const [fileHash, setFileHash] = useState("");
+  document.title="Search for a File | DStorage for OER";
 
   return (
+    
     <Base title="Search for a File Here.!" description="Welcome to File Search Section." classname="container p-4 formBackground rounded">
       <div className="row">
         <div className="col-md-8 offset-md-2">
@@ -34,14 +36,22 @@ const FileRetrieve = () => {
             </div>
           </form>
           <div className="row text-center">
-            <div className="mt-3 col-md-3">
+            {/* <div className="mt-3 col-md-3">
               <Link
                 className="btn btn-block btn-info mb-3 homeBtn"
                 to="/"
               >
                 Home <span className="fa fa-home"></span>
               </Link>
-            </div>
+            </div> */}
+            <div className="mt-3 col-md-3">
+                  <Link
+                    className="btn btn-block btn-info mb-3 homeBtn"
+                    to="/dashboard"
+                  >
+                    <span className="fa fa-tachometer"></span> Dashboard 
+                  </Link>
+                </div>
           </div>
         </div>
       </div>

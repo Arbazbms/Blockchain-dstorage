@@ -98,3 +98,21 @@ a {
     color: #f00 !important;
     font-size: 25px !important;
 }
+
+.myCard {
+    transition: all 0.2s;
+  /* box-shadow: 15px 15px 30px; */
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
+  border: 2px solid #8995a0;
+  border-radius: 0px !important;
+  height: 500px;
+}
+
+.myCard:hover {
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.05);
+    transform: scale(1.05);
+    z-index: 2;
+    border-radius: 0px !important;
+    border: 2px solid teal;
+}
+  

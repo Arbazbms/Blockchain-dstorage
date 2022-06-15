@@ -7,17 +7,27 @@ import { Link } from "react-router-dom";
 class ListFile extends Component 
 {
     render() {
+    document.title="List Files | DStorage for OER";
+
         return (
           <Base title="Find all Files Here.!" description="Welcome to File Listing Section.">
           <div className="row">
-              <div className="col-md-2 offset-md-2">
+              {/* <div className="col-md-2 offset-md-2">
                 <Link
                   className="btn btn-block btn-outline-info mb-3 homeBtn"
                   to="/"
                 >
                   Home <span className="fa fa-home"></span>
                 </Link>
-              </div>
+              </div> */}
+              <div className="col-md-2 offset-md-2">
+                  <Link
+                    className="btn btn-block btn-outline-info mb-3 homeBtn"
+                    to="/dashboard"
+                  >
+                    <span className="fa fa-tachometer"></span> Dashboard 
+                  </Link>
+                </div>
               <div className="col-md-4"></div>
               <div className="col-md-2">
                 <h3 style={{ 'fontSize': '18px' }} className="text-center btn btn-block homeBtn btn-outline-info">File count: <span className="badge badge-success">{this.props.count}</span></h3>

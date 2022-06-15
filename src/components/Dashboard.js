@@ -3,16 +3,27 @@ import Base from "../core/Base";
 import { Link } from "react-router-dom";
 
 const Landing = ({
-    account = "0x0"
+    account = "0x0",
+    count,
 }) => {
+
+    document.title = "Dashboard | DStorage for OER";
 
     const userLeftSide = () => {
         return (
             <div className="card text-center">
                 <h4 className="card-header text-center borderBottom">
-                    <b>Home</b>
+                    <b><span className="fa fa-tachometer"></span> Dashboard</b>
                 </h4>
                 <ul className="list-group text-center">
+                    <li className="list-group-item borderBottom1">
+                        <Link
+                            to="/"
+                            className="nav-link"
+                        >
+                            <i className="fa fa-home"></i> Home
+                        </Link>
+                    </li>
                     <li className="list-group-item borderBottom1">
                         <Link
                             to="/uploadFile"
@@ -54,6 +65,12 @@ const Landing = ({
                             Public Id
                         </span>
                         {account ? account : "0x0"}
+                    </li>
+                    <li className="list-group-item borderBottom1">
+                        <span className="badge badge-success mr-2">
+                            Files Uploaded
+                        </span>
+                        {count}
                     </li>
                 </ul>
             </div>
