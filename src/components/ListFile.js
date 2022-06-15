@@ -43,6 +43,7 @@ class ListFile extends Component
                         <th scope="col" style={{ width: '150px'}}>Id</th>
                         <th scope="col" style={{ width: '200px'}}>Name</th>
                         <th scope="col" style={{ width: '230px'}}>Description</th>
+                        <th scope="col" style={{ width: '230px'}}>Category</th>
                         <th scope="col" style={{ width: '120px'}}>Type</th>
                         <th scope="col" style={{ width: '120px'}}>Size</th>
                         <th scope="col" style={{ width: '180px'}}>Date</th>
@@ -57,6 +58,7 @@ class ListFile extends Component
                             <td>{file.fileId}</td>
                             <td>{file.fileName}</td>
                             <td>{file.fileDescription}</td>
+                            <td>{file.fileCategory}</td>
                             <td>{file.fileType}</td>
                             <td>{convertBytes(file.fileSize)}</td>
                             <td>{moment.unix(file.uploadTime).format('h:mm:ss A DD/MM/Y')}</td>

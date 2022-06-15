@@ -14,13 +14,13 @@ const Card = ({
                     <p className="lead font-weight-normal mt-2">
                         {file.fileDescription ? file.fileDescription : "A Sample File"}
                     </p>
-                    <div className="row text-justify">
+                    <div className="row">
                          <div className="col-12">
                             <b>File Hash:</b> {file.fileHash ? file.fileHash.substring(0,20) + "..."  : "File hash"}
                          </div>
                          <br />
                          <div className="col-12">
-                            <b>File Category:</b> {file.category ? file.category : "Unknown"}
+                            <b>File Category:</b> {file.fileCategory ? file.fileCategory : "Unknown"}
                          </div>
                          <div className="col-12">
                             <b>Uploaded By:</b> {file.uploader.substring(0,16) + "..."}

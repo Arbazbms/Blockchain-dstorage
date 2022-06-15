@@ -33,9 +33,10 @@ contract('DStorage', ([deployer, uploader]) => {
     const fileType = 'TypeOfTheFile'
     const fileName = 'NameOfTheFile'
     const fileDescription = 'DescriptionOfTheFile'
+    const fileCategory = 'CategoryOfFile'
 
     before(async () => {
-      result = await dstorage.uploadFile(fileHash, fileSize, fileType, fileName, fileDescription, { from: uploader })
+      result = await dstorage.uploadFile(fileHash, fileSize, fileType, fileName, fileDescription, fileCategory, { from: uploader })
       fileCount = await dstorage.fileCount()
     })
 
@@ -50,19 +51,20 @@ contract('DStorage', ([deployer, uploader]) => {
       assert.equal(event.fileType, fileType, 'Type is correct')
       assert.equal(event.fileName, fileName, 'Name is correct')
       assert.equal(event.fileDescription, fileDescription, 'Description is correct')
+      assert.equal(event.fileCategory, fileCategory, 'Category is correct')
       assert.equal(event.uploader, uploader, 'Uploader is correct')
 
       // FAILURE: File must have hash
-      await dstorage.uploadFile('', fileSize, fileType, fileName, fileDescription, { from: uploader }).should.be.rejected;
+      await dstorage.uploadFile('', fileSize, fileType, fileName, fileDescription,fileCategory, { from: uploader }).should.be.rejected;
 
       // FAILURE: File must have size
-      await dstorage.uploadFile(fileHash, '', fileType, fileName, fileDescription, { from: uploader }).should.be.rejected;
+      await dstorage.uploadFile(fileHash, '', fileType, fileName, fileDescription,fileCategory, { from: uploader }).should.be.rejected;
       
       // FAILURE: File must have type
-      await dstorage.uploadFile(fileHash, fileSize, '', fileName, fileDescription, { from: uploader }).should.be.rejected;
+      await dstorage.uploadFile(fileHash, fileSize, '', fileName, fileDescription,fileCategory, { from: uploader }).should.be.rejected;
 
       // FAILURE: File must have name
-      await dstorage.uploadFile(fileHash, fileSize, fileType, '', fileDescription, { from: uploader }).should.be.rejected;
+      await dstorage.uploadFile(fileHash, fileSize, fileType, '', fileDescription,fileCategory, { from: uploader }).should.be.rejected;
 
       // FAILURE: File must have description
       await dstorage.uploadFile(fileHash, fileSize, fileType, fileName, '', { from: uploader }).should.be.rejected;

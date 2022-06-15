@@ -87,7 +87,7 @@ class App extends Component {
 
 
   //Upload File
-  uploadFile = description => {
+  uploadFile =( description, category) => {
     console.log("Submitting file to IPFS...")
 
     // Add file to the IPFS
@@ -103,7 +103,7 @@ class App extends Component {
       if (this.state.type === '') {
         this.setState({ type: 'none' })
       }
-      this.state.dstorage.methods.uploadFile(result[0].hash, result[0].size, this.state.type, this.state.name, description).send({ from: this.state.account }).on('transactionHash', (hash) => {
+      this.state.dstorage.methods.uploadFile(result[0].hash, result[0].size, this.state.type, this.state.name, description, category).send({ from: this.state.account }).on('transactionHash', (hash) => {
         this.setState({
           loading: false,
           type: null,
