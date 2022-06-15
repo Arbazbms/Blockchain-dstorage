@@ -11,7 +11,7 @@ import Card from "../core/Card";
         document.title="Home | DStorage for OER";
         return (
         <>
-            <Base title = "Welcome, to Open Educational Resources.!" description="Decentralised Storage System for Educational Resources Using IPFS & Ethereum Blockchain.">
+            <Base title = "Welcome To Open Educational Resources.!" description="Decentralised Storage System for Educational Resources Using IPFS & Ethereum Blockchain.">
             <div className="row">
               <div className="col-md-2 offset-md-2">
                 <Link
@@ -32,7 +32,7 @@ import Card from "../core/Card";
                             {files.map((file, index) => {
                                 return (
                                     <div key={index} className="col-3 mb-4">
-                                            <Card file={file} />
+                                        <Card file={file} />
                                     </div>
                                 );
                             })}
