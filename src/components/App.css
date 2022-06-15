@@ -105,7 +105,7 @@ a {
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
   border: 2px solid #8995a0;
   border-radius: 0px !important;
-  height: 500px;
+  height: 510px;
 }
 
 .myCard:hover {
@@ -116,3 +116,14 @@ a {
     border: 2px solid teal;
 }
   
+.myCardHeader {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 50px;
+}
+
+.myImg {
+    height:150px !important;
+    width: 150px !important;
+}
