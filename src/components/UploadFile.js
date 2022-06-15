@@ -29,13 +29,13 @@ class UpoadFile extends Component {
                   autoFocus
                   required
                 />
+                <p className="lead my-2">Enter File Category</p>
                 <input
                   id="fileCategory"
                   type="text"
                   ref={(input) => { this.fileCategory = input }}
                   className="form-control"
-                  placeholder="File Category..."
-                  autoFocus
+                  placeholder="File Category: AI, ML, DBMS ..."
                   required
                 />
               </div>
