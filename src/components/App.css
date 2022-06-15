@@ -127,3 +127,14 @@ a {
     height:150px !important;
     width: 150px !important;
 }
+
+.sb {
+    padding-left: 32px;
+    background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+    background-size: 25px;
+    background-position: 4px 6px;
+    border:2px solid teal;
+    /* font-size: 18px !important; */
+    font-weight: bold;
+    caret-color: #f00; 
+}
