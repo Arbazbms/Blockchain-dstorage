@@ -4,6 +4,8 @@ const ImageHelper = ({ file }) => {
      var imageURL = `https://www.freecodecamp.org/news/technical-guide-to-ipfs-decentralized-storage-of-web3/`;
      if(file.fileType === "image/png") 
             imageURL = `https://ipfs.infura.io/ipfs/${file.fileHash}`;
+     else if(file.fileType === "image/jpeg") 
+            imageURL = `https://ipfs.infura.io/ipfs/${file.fileHash}`;
      else if(file.fileType === "application/pdf")
             imageURL = `https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/1200px-PDF_file_icon.svg.png`;
      else if(file.fileType === "application/vnd.openxmlformats-officedocument.wordprocessingml.document") 

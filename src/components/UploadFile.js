@@ -14,7 +14,8 @@ class UpoadFile extends Component {
             <form onSubmit={(event) => {
               event.preventDefault()
               const description = this.fileDescription.value
-              this.props.uploadFile(description)
+              const category = this.fileCategory.value
+              this.props.uploadFile(description, category)
             }} >
               <div className="form-group">
                 <br></br>
@@ -26,6 +27,15 @@ class UpoadFile extends Component {
                   className="form-control"
                   placeholder="File Description..."
                   autoFocus
+                  required
+                />
+                <p className="lead my-2">Enter File Category</p>
+                <input
+                  id="fileCategory"
+                  type="text"
+                  ref={(input) => { this.fileCategory = input }}
+                  className="form-control"
+                  placeholder="File Category: AI, ML, DBMS ..."
                   required
                 />
               </div>

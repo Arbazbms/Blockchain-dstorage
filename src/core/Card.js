@@ -20,7 +20,7 @@ const Card = ({
                          </div>
                          <br />
                          <div className="col-12  text-justify">
-                            <b>File Category:</b> {file.category ? file.category : "Unknown"}
+                            <b>File Category:</b> {file.fileCategory ? file.fileCategory : "Unknown"}
                          </div>
                          <div className="col-12  text-justify">
                             <b>Uploaded By:</b> {file.uploader.substring(0,16) + "..."}
