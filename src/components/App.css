@@ -1,1 +1,129 @@
 /* Styles go here */
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika&family=Lora&family=Merriweather:wght@300&family=Noto+Serif&display=swap');
+
+/*
+font-family: 'Inika', serif;
+font-family: 'Lora', serif;
+font-family: 'Merriweather', serif;
+font-family: 'Noto Serif', serif;
+*/
+
+.back{
+    background-color: ivory
+}
+
+*{
+    /* font-family: 'Joan', serif; */
+    /* font-family: 'Inika', serif; */
+    font-family: 'Lora', serif;
+}
+
+/* .form-control, .fileInputTextBox, .my-btn {
+    width: 760px !important;
+    margin-bottom: 15px !important;
+} */
+
+.tabb{
+    display: flex;
+    justify-content: center;
+}
+
+.card-header {
+    background-color: #e9ecef !important;
+}
+
+.jumbotron{
+    border: 2px solid #8995a0;
+}
+
+.borderBottom {
+    border: 2px solid #8995a0;
+}
+
+.borderBottom1 {
+    border: 2px solid #8995a0;
+    border-radius: 0 !important;
+}
+
+.nav-link {
+    text-decoration: none !important;
+    color: #1f3448 !important;
+}
+
+.formBackground {
+    /* background-color: #eff4f6; */
+    border: 2px solid #a0afbc;
+}
+
+.paraText {
+    font-size:18px;
+}
+
+.names {
+    text-decoration: none !important;
+    color: #ffd452;
+}
+
+.names:hover, .navbar-brand:hover {
+    color: rgb(24, 255, 193) !important;
+    transform: scale(1.1,1.2);
+    transition: 1s ease-in-out;
+}
+
+.navbar {
+    background-color: #232629 !important;
+    /* box-shadow: 0px 4px 15px rgba(255, 205, 20, 0.8); */
+}
+
+.homeBtn {
+    border-radius: 0px !important;
+}
+
+li {
+    font-size: 18px !important;
+}
+
+a {
+    cursor: pointer !important;
+}
+
+.fa-flash {
+    font-size: 14px !important;
+    color: rgb(162, 251, 227) !important
+}
+
+.fa-heart, .fa-flag {
+    color: #f00 !important;
+    font-size: 25px !important;
+}
+
+.myCard {
+    transition: all 0.2s;
+  /* box-shadow: 15px 15px 30px; */
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
+  border: 2px solid #8995a0;
+  border-radius: 0px !important;
+  height: 510px;
+}
+
+.myCard:hover {
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.05);
+    transform: scale(1.05);
+    z-index: 2;
+    border-radius: 0px !important;
+    border: 2px solid teal;
+}
+  
+.myCardHeader {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 50px;
+}
+
+.myImg {
+    height:150px !important;
+    width: 150px !important;
+}

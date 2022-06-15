@@ -1,9 +1,17 @@
 import DStorage from '../abis/DStorage.json'
 import React, { Component } from 'react';
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
 import Navbar from './Navbar'
-import Main from './Main'
+import Landing from "./Dashboard";
+import UploadFile from './UploadFile';
+import ListFile from "./ListFile";
+import FileRetrieve from './FileRetrieve';
 import Web3 from 'web3';
 import './App.css';
+import Home from './Home';
 
 //Declare IPFS
 const ipfsClient = require('ipfs-http-client')
@@ -39,7 +47,7 @@ class App extends Component {
     // Network ID
     const networkId = await web3.eth.net.getId()
     const networkData = DStorage.networks[networkId]
-    if(networkData) {
+    if (networkData) {
       // Assign contract
       const dstorage = new web3.eth.Contract(DStorage.abi, networkData.address)
       this.setState({ dstorage })
@@ -56,7 +64,7 @@ class App extends Component {
     } else {
       window.alert('DStorage contract not deployed to detected network.')
     }
-    this.setState({loading:false})
+    this.setState({ loading: false })
   }
 
   // Get file from user
@@ -85,26 +93,26 @@ class App extends Component {
     // Add file to the IPFS
     ipfs.add(this.state.buffer, (error, result) => {
       console.log('IPFS result', result)
-      if(error) {
+      if (error) {
         console.error(error)
         return
       }
 
       this.setState({ loading: true })
       // Assign value for the file without extension
-      if(this.state.type === ''){
-        this.setState({type: 'none'})
+      if (this.state.type === '') {
+        this.setState({ type: 'none' })
       }
       this.state.dstorage.methods.uploadFile(result[0].hash, result[0].size, this.state.type, this.state.name, description).send({ from: this.state.account }).on('transactionHash', (hash) => {
         this.setState({
-         loading: false,
-         type: null,
-         name: null
-       })
-       window.location.reload()
-      }).on('error', (e) =>{
+          loading: false,
+          type: null,
+          name: null
+        })
+        window.location.reload()
+      }).on('error', (e) => {
         window.alert('Error')
-        this.setState({loading: false})
+        this.setState({ loading: false })
       })
     })
   }
@@ -127,17 +135,25 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <Navbar account={this.state.account} />
-        { this.state.loading
-          ? <div id="loader" className="text-center mt-5"><p>Loading...</p></div>
-          : <Main
-              files={this.state.files}
-              captureFile={this.captureFile}
-              uploadFile={this.uploadFile}
-            />
+        {this.state.loading
+          ? <div id="loader" className="text-center mt-5"><h1>Loading...<i class="fa fa-cog fa-spin fa-fw"></i></h1></div>
+          : <Routes>
+              <Route path="/dashboard" element={<Landing account={this.state.account} count={this.state.files.length} />} />
+              <Route path="/uploadFile" element={<UploadFile captureFile={this.captureFile} uploadFile={this.uploadFile} />} />
+              <Route path="/listFiles" element={<ListFile files={this.state.files} count={this.state.files.length} />} />
+              <Route path="/retrieve" element={<FileRetrieve />} />
+              <Route path="/" element={<Home files={this.state.files} count={this.state.files.length} />} />
+          </Routes>
         }
-      </div>
+        {/* <Routes>
+                <Route path="/" element={<Landing />} />
+                <Route path="/uploadFile" element={<UploadFile captureFile={this.captureFile} uploadFile={this.uploadFile} />}  />
+                <Route path="/listFiles" element={<ListFile  files={this.state.files} />} />
+                <Route path="/retrieve" element={<FileRetrieve />} />
+        </Routes> */}
+      </>
     );
   }
 }
