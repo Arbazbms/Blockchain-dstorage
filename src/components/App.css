@@ -138,3 +138,27 @@ a {
     font-weight: bold;
     caret-color: #f00; 
 }
+
+.categoryList{
+        margin-bottom: 10px;
+        margin-left: 8px;
+        font-family: cursive, sans-serif;
+        outline: 0;
+        background: #2ecc71;
+        color: #fff;
+        border: 1px solid crimson;
+        padding: 4px;
+        border-radius: 9px;
+        width: 250px;
+}
+
+.categoryName{
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.backcolor{
+    background: #2ecc71;
+
+}

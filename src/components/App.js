@@ -12,6 +12,7 @@ import FileRetrieve from './FileRetrieve';
 import Web3 from 'web3';
 import './App.css';
 import Home from './Home';
+import CategorySearch from './CategorySearch';
 
 //Declare IPFS
 const ipfsClient = require('ipfs-http-client')
@@ -141,6 +142,8 @@ class App extends Component {
           ? <div id="loader" className="text-center mt-5"><h1>Loading...<i class="fa fa-cog fa-spin fa-fw"></i></h1></div>
           : <Routes>
               <Route path="/" element={<Home files={this.state.files} count={this.state.files.length} />} />
+              <Route path="/categorySearch" element={<CategorySearch files={this.state.files} count={this.state.files.length} />} />
+              
               <Route path="/dashboard" element={<Landing account={this.state.account} count={this.state.files.length} />} />
               <Route path="/uploadFile" element={<UploadFile captureFile={this.captureFile} uploadFile={this.uploadFile} />} />
               <Route path="/listFiles" element={<ListFile files={this.state.files} count={this.state.files.length} />} />
