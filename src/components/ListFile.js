@@ -20,6 +20,7 @@ class ListFile extends Component
                   Home <span className="fa fa-home"></span>
                 </Link>
               </div> */}
+              <p>Retrieved Files</p>
               <div className="col-md-2 offset-md-2">
                   <Link
                     className="btn btn-block btn-outline-info mb-3 homeBtn"

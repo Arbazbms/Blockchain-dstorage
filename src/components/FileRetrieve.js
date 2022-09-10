@@ -15,7 +15,7 @@ const FileRetrieve = () => {
           <form>
             <div className="form-group">
               <br></br>
-              <p className="lead my-2">Enter Content Identifier / File Hash</p>
+              <p className="lead my-2">Enter Content Identifier or File Hash</p>
               <input
                 id="fileHash"
                 type="text"
